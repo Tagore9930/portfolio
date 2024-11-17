@@ -1,0 +1,40 @@
+<div class="about bg-color">
+  <h3 class="navigation-title" id="about">About <span>Me</span></h3>
+  <div class="container h-100">
+    <div class="information">
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
+        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
+        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
+        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
+        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
+      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/tagore-banda/" class="btn-slide-animation slide-main"><i
+            class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/tagore9930" class="btn-slide-animation slide-main"><i class='bx bxl-github'></i></a>
+        <a href="https://api.whatsapp.com/send?phone=7095334396" class="btn-slide-animation slide-main"><i
+            class='bx bxl-whatsapp'></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tagore9930@gmail.com"
+          class="btn-slide-animation slide-main"><i class='bx bxl-gmail'></i></a>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn-1 btn-slide-animation slide-transparent">Resume</button>
+        <button class="btn-2 btn-slide-animation slide-main">Contact</button>
+      </div>
+    </div>
+    <div class="skills">
+      <h4 class="ms-1">Skills</h4>
+      <div class="skills-list">
+        <div class="skill" *ngFor="let skill of skillsList">
+          <img src="assets/skills/{{skill.sillImg}}" alt="{{skill.skillName}} Image" class="skill-img">
+          <p>{{ skill.skillName }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

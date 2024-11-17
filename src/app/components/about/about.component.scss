@@ -1,0 +1,110 @@
+.about {
+  padding: 60px 0;
+  height: 100%;
+
+  // .col-md-6 {
+  //   background-color: aqua;
+  // }
+
+  .container {
+    display: flex;
+    // align-items: center;
+
+    .information {
+      text-align: justify;
+      width: 50%;
+      vertical-align: middle;
+
+      .description {
+        color: var(--text-color);
+        font-size: 20px;
+        margin: 0;
+      }
+
+      .social-icons {
+        display: flex;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 45px;
+          height: 45px;
+          background-color: transparent;
+          border: 2px solid var(--primary-color);
+          font-size: 27px;
+          border-radius: 50%;
+          color: var(--primary-color);
+          margin: 25px 15px 25px 0;
+          transition: 0.3s ease-in-out;
+        }
+
+        a:hover {
+          color: var(--bg-color);
+          transform: scale(1.3)translateY(-5px);
+          // box-shadow: 0 0 25px var(--primary-color);
+          background-color: var(--primary-color);
+        }
+      }
+
+      .action-buttons {
+        // background-color: gray;
+
+        .btn-1,
+        .btn-2 {
+          padding: 10px 40px;
+          font-size: 18px;
+          font-weight: 600;
+          border: 2px solid var(--primary-color);
+          border-radius: 50px;
+          margin-right: 10px;
+          color: var(--bg-color);
+          overflow: hidden;
+          transition: background-color 350ms ease-in-out;
+        }
+
+        .btn-1 {
+          background-color: var(--primary-color);
+          // box-shadow: 0 0 25px var(--primary-color);
+
+          &:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+          }
+        }
+
+        .btn-2 {
+          color: var(--primary-color);
+          background-color: transparent;
+
+          &:hover {
+            // background-color: var(--primary-color);
+            color: var(--bg-color);
+          }
+        }
+      }
+    }
+
+    .skills {
+      width: 50%;
+      padding: 0 20px;
+      color: var(--text-color);
+
+      .skills-list {
+        display: flex;
+
+        .skill {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+
+          .skill-img {
+            width: 50px;
+            // height: 100px;
+          }
+        }
+      }
+    }
+  }
+}

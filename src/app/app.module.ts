@@ -3,18 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DialogComponent } from './core/dialog/dialog.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { HeaderComponent } from './core/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { MyJourneyComponent } from './components/my-journey/my-journey.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    MyJourneyComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDialogModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

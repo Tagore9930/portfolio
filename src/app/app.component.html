@@ -1,45 +1,6 @@
-<div class="main">
-  <header class="header">
-    <a href="#home" class="logo">Tagore
-      <span>Banda</span>
-    </a>
-
-    <i class="bx bx-menu" id="menu-icon"></i>
-
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#education">Education</a>
-      <a href="#service">Service</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <section class="home" id="home">
-    <div class="home-content">
-      <h1>Hi, It's <span>Tagore</span></h1>
-      <h3 class="text-animation">I am a <span></span></h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas enim quod deserunt, a delectus sunt earum?
-        Vel facere recusandae itaque qui a. Inventore, quia. Nobis dolor magni nostrum voluptatum aliquid!</p>
-
-      <div class="social-icons">
-        <a href="#"><i class='bx bxl-linkedin'></i></a>
-        <a href="#"><i class='bx bxl-github'></i></a>
-        <a href="#"><i class='bx bxl-google'></i></a>
-        <a href="#"><i class='bx bxl-gmail'></i></a>
-      </div>
-
-      <div class="btn-group">
-        <a href="#" class="btn">Hire</a>
-        <a href="#contact" class="btn">Contact</a>
-      </div>
-    </div>
-    <div class="home-img">
-      <img src="/assets/profile-img-no-background-2.png" alt="">
-    </div>
-  </section>
-</div>
-
-<div class="dialog" *ngIf="isDialog">
-  <span>Building Portfolio</span>
-  <i class='bx bx-x close-icon' (click)="isDialog = false;"></i>
+<div class="portfolio">
+  <my-header></my-header>
+  <home></home>
+  <about></about>
+  <my-journey></my-journey>
 </div>
