@@ -1,0 +1,57 @@
+<div class="journeys bg-color">
+  <header>
+    <div class="custom-switch">
+      <div class="switch-types">
+        <input type="checkbox" [(ngModel)]="isExperience" hidden />
+        <span
+          class="journey-type"
+          [class.active]="!isExperience"
+          (click)="isExperience = false"
+          >Education</span
+        >
+        <span
+          class="journey-type"
+          [class.active]="isExperience"
+          (click)="isExperience = true"
+        >
+          Experience
+        </span>
+      </div>
+    </div>
+    <h3 class="navigation-title m-0">
+      <span>Journey</span>
+    </h3>
+  </header>
+
+  <main class="journeys-container container">
+    <div class="row gap-5 justify-content-center">
+      <div class="journey-div col-4" *ngFor="let myJourney of journeys">
+        <header>
+          <p class="journey-title">Frontend Angular Engineer</p>
+          <div class="journey-duration">
+            <span>●</span>
+            <span>Jan 2024</span>
+            <span>-</span>
+            <span>Feb 2024</span>
+          </div>
+        </header>
+        <main>
+          <div class="journey-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            assumenda tempora nesciunt. Eos, beatae dolor provident, obcaecati
+            corporis nam tenetur sequi ratione iste perferendis eveniet
+            excepturi consequuntur doloremque nisi voluptatibus.
+          </div>
+          <div class="top-skills">
+            <span class="top-skills-title">Top Skills:</span>
+            <span>Angular,</span>
+            <span>Angular Material,</span>
+            <span>Html 5,</span>
+            <span>CSS,</span>
+            <span>Typesript</span>
+          </div>
+        </main>
+      </div>
+    </div>
+  </main>
+</div>

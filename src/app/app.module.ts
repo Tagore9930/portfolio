@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { MyJourneyComponent } from './components/my-journey/my-journey.component';
+import { MyJourneyComponent } from './components/my-journeys/my-journeys.component';
 import { FormsModule } from '@angular/forms';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     MyJourneyComponent,
+    ProjectsComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+<div class="projects-section bg-color">
+  <header>
+    <h3 class="navigation-title">
+      Featured
+      <span>Projects</span>
+    </h3>
+  </header>
+
+  <main class="projects-container container">
+    <div class="projects-list row">
+      <div *ngFor="let project of projectsList" class="project">
+        <img [src]="project?.gif" alt="project preview" class="project-image" />
+        <div class="project-info">
+          <h4 class="project-title">{{ project.name }}</h4>
+          <p class="project-description">{{ project.description }}</p>
+          <a [href]="project.link" target="_blank" class="project-github">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

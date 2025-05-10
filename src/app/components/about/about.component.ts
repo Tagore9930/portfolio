@@ -33,4 +33,6 @@ export class AboutComponent {
     //   skillName: ""
     // },
   ]
+
+  window = window
 }

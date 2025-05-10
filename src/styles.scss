@@ -17,8 +17,8 @@
   :root {
     --text-color: white;
     --primary-color: orangered;
-    --bg-color: #080808;
-    --second-bg-color: #131313;
+    --bg-color: #151515;
+    --second-bg-color: #222222;
   }
 }
 
@@ -37,7 +37,7 @@
   color-scheme: dark;
   --text-color: white;
   --primary-color: orangered;
-  --bg-color: #080808;
+  --bg-color: #151515;
   --second-bg-color: #131313;
 }
 
@@ -53,8 +53,11 @@
 
 html,
 body {
+  width: 100%;
   height: 100%;
   color-scheme: dark light;
+  margin: 0;
+  padding: 0;
 }
 
 .row {
