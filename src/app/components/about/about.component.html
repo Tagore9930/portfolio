@@ -1,16 +1,13 @@
-<div class="about bg-color" #about>
+<div class="about bg-color" id="about">
   <h3 class="navigation-title">About <span>Me</span></h3>
   <div class="container h-100">
     <div class="information">
       <p class="description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
-        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
-        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
-        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate omnis fugiat corporis laborum sint tempora,
-        magni sapiente quasi facere qui in eum sunt, dolor quae placeat numquam excepturi consequatur. Dolorem.
+        Frontend Engineer with hands-on experience in building responsive, user-friendly web applications using Angular
+        and modern frontend technologies. Skilled in developing reusable UI components, designing component layouts with
+        HTML, CSS, and frameworks like Bootstrap and Tailwind CSS. Proficient in collaborating with cross-functional
+        teams, working with Git version control, following Agile methodologies, and continuously enhancing UI/UX design
+        and web performance skills.
       </p>
       <div class="social-icons">
         <a href="https://www.linkedin.com/in/tagore-banda/" target="_blank" class="btn-slide-animation slide-main"><i
@@ -30,11 +27,11 @@
       </div>
     </div>
     <div class="skills">
-      <h4 class="ms-1">Skills</h4>
+      <h4 class="ms-1 fs-5 fw-b">Skills</h4>
       <div class="skills-list">
         <div class="skill" *ngFor="let skill of skillsList">
           <img src="assets/skills/{{skill.sillImg}}" alt="{{skill.skillName}} Image" class="skill-img">
-          <p>{{ skill.skillName }}</p>
+          <p class="skill-name">{{ skill.skillName }}</p>
         </div>
       </div>
     </div>

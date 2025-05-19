@@ -21,17 +21,49 @@ export class AboutComponent {
       skillName: "SASS"
     },
     {
+      sillImg: "bootstrap.png",
+      skillName: "bootstrap"
+    },
+    {
       sillImg: "javascript.png",
       skillName: "Javascript"
     },
-    // {
-    //   sillImg: ".png",
-    //   skillName: ""
-    // },
-    // {
-    //   sillImg: ".png",
-    //   skillName: ""
-    // },
+    {
+      sillImg: "typescript.png",
+      skillName: "typescript"
+    },
+    {
+      sillImg: "angular.png",
+      skillName: "angular"
+    },
+    {
+      sillImg: "angular_material.png",
+      skillName: "Material"
+    },
+    {
+      sillImg: "react.png",
+      skillName: "react"
+    },
+    {
+      sillImg: "git.png",
+      skillName: "git"
+    },
+    {
+      sillImg: "github.png",
+      skillName: "github"
+    },
+    {
+      sillImg: "gitlab.png",
+      skillName: "gitLab"
+    },
+    {
+      sillImg: "bitbucket.png",
+      skillName: "bitbucket"
+    },
+    {
+      sillImg: "wrike.png",
+      skillName: "wrike"
+    },
   ]
 
   window = window

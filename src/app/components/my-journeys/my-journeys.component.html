@@ -1,38 +1,57 @@
-<div class="journeys bg-color">
-  <header>
+<div class="journeys bg-color" id="journey">
+  <header class="container">
+    <h3 class="navigation-title m-0">
+      {{(isExperience) ? 'Experience' : 'Education'}}
+      <span>Journey</span>
+    </h3>
     <div class="custom-switch">
       <div class="switch-types">
-        <input type="checkbox" [(ngModel)]="isExperience" hidden />
-        <span
-          class="journey-type"
-          [class.active]="!isExperience"
-          (click)="isExperience = false"
-          >Education</span
-        >
-        <span
-          class="journey-type"
-          [class.active]="isExperience"
-          (click)="isExperience = true"
-        >
+        <mat-checkbox [(ngModel)]="isExperience" color="primary" hidden></mat-checkbox>
+        <span class="journey-type" [class.active]="!isExperience"
+          (click)="isExperience = false; changeJourneyType()">Education</span>
+        <span class="journey-type" [class.active]="isExperience" (click)="isExperience = true; changeJourneyType()">
           Experience
         </span>
       </div>
     </div>
-    <h3 class="navigation-title m-0">
-      <span>Journey</span>
-    </h3>
   </header>
 
   <main class="journeys-container container">
-    <div class="row gap-5 justify-content-center">
-      <div class="journey-div col-4" *ngFor="let myJourney of journeys">
+    <div class="row gap-5 journeys-section">
+      <mat-card class="journey-card" *ngFor="let journey of journeys">
+        <mat-card-header class="mb-3">
+          <mat-card-title class="d-flex justify-content-between">
+            <span class="jny-title">{{journey.role}}</span>
+            <span class="jny-duration">{{journey.duration.start | date: 'MMM YYYY'}} – {{(journey.duration.end) ?
+              (journey.duration.end |
+              date: 'MMM yyyy') : 'Present'}}</span>
+          </mat-card-title>
+          <mat-card-subtitle>
+            <span>{{journey.organization}} – ( {{journey.location}} )</span>
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{journey.description}}</p>
+          <ul class="ps-3">
+            <li *ngFor="let bltPoint of journey.bulletPoints" class="lh-lg">{{bltPoint}}</li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-stroked-button color="primary" class="rounded-pill border-white me-2"
+            *ngFor="let skill of journey.topSkills" [href]="skill.officalLink" target="_blank">{{skill.name}}</a>
+        </mat-card-actions>
+      </mat-card>
+      <!-- <div class="journey-div col-4" *ngFor="let myJourney of journeys">
         <header>
           <p class="journey-title">Frontend Angular Engineer</p>
-          <div class="journey-duration">
-            <span>●</span>
-            <span>Jan 2024</span>
-            <span>-</span>
-            <span>Feb 2024</span>
+          <div>
+            <p style="margin: 0">Freelancer</p>
+            <div class="journey-duration">
+              <span>●</span>
+              <span>Jan 2024</span>
+              <span>-</span>
+              <span>Feb 2024</span>
+            </div>
           </div>
         </header>
         <main>
@@ -51,7 +70,7 @@
             <span>Typesript</span>
           </div>
         </main>
-      </div>
+      </div> -->
     </div>
   </main>
 </div>

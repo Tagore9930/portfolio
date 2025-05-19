@@ -1,3 +1,52 @@
+@use '@angular/material' as mat;
+
+// 1. Declare a custom primary palette
+$my-custom-primary: (
+  50: #ffece6,
+  100: #ffd1bf,
+  200: #ffb399,
+  300: #ff9466,
+  400: #ff7a40,
+  500: #ff4500,
+  600: #e63e00,
+  700: #cc3700,
+  800: #b33000,
+  900: #802300,
+  A100: #ffd7cc,
+  A200: #ff8f66,
+  A400: #ff5c1a,
+  A700: #cc3300,
+  contrast: (50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: black,
+    A200: black,
+    A400: white,
+    A700: white,
+  )
+);
+
+
+// 2. Define palette
+$custom-primary-palette: mat.define-palette($my-custom-primary);
+
+// 3. Create theme
+$my-theme: mat.define-light-theme((color: (primary: $custom-primary-palette,
+        accent: mat.define-palette(mat.$pink-palette),
+        warn: mat.define-palette(mat.$red-palette),
+      )));
+
+// 4. Apply theme
+@include mat.core();
+@include mat.all-component-themes($my-theme);
+
 /* You can add global styles to this file, and also import other style files */
 
 :root {
@@ -16,7 +65,7 @@
 (prefers-color-scheme: light) {
   :root {
     --text-color: white;
-    --primary-color: orangered;
+    --primary-color: #ff4500;
     --bg-color: #151515;
     --second-bg-color: #222222;
   }
@@ -27,7 +76,7 @@
   /** Light Mod colors */
   color-scheme: light;
   --text-color: black;
-  --primary-color: orangered;
+  --primary-color: #ff4500;
   --bg-color: #f8f8f8;
   --second-bg-color: #e3e3e3;
 }
@@ -36,7 +85,7 @@
   /** Dark Mod colors */
   color-scheme: dark;
   --text-color: white;
-  --primary-color: orangered;
+  --primary-color: #ff4500;
   --bg-color: #151515;
   --second-bg-color: #131313;
 }
@@ -182,8 +231,20 @@ body {
   text-align: center;
   color: var(--text-color);
   margin-bottom: 20px;
+  font-size: 30px !important;
+  font-weight: 500 !important;
 
   span {
     color: var(--primary-color);
   }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

@@ -21,6 +21,8 @@
       width: 60vw;
 
       .hero-name {
+        font-size: 25px;
+        font-weight: 500;
         color: var(--text-color);
 
         span {
@@ -30,6 +32,10 @@
 
       .hero-message {
         color: var(--text-color);
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
 
       .hero-roles {
