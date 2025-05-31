@@ -1,0 +1,205 @@
+.hero-section {
+  // background-color: green;
+  // padding: 60px 0;
+  height: 100%;
+
+  .hero-container {
+    // background-color: rgba(255, 0, 0, 0.737);
+    // height: 100%;
+    // padding: 0;
+
+    .col-6 {
+      // background-color: rgba(0, 255, 255, 0.619);
+      // border: 1px solid;
+    }
+
+    .my-details {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: inherit;
+      max-width: 60vw;
+
+      .hero-name {
+        font-size: 25px;
+        font-weight: 500;
+        color: var(--text-color);
+
+        span {
+          color: var(--primary-color);
+        }
+      }
+
+      .hero-message {
+        color: var(--text-color);
+        font-weight: 300;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      .hero-roles {
+        font-size: 34px;
+        // font-size: 25px;
+        font-weight: 600;
+        color: var(--text-color);
+
+        span {
+          position: relative;
+          color: var(--primary-color) !important;
+
+
+          //   &::before {
+          //     content: 'Web Developer';
+          //     color: var(--primary-color);
+          //     animation: words 20s infinite;
+          //   }
+
+          //   &::after {
+          //     content: '';
+          //     background-color: var(--bg-color);
+          //     position: absolute;
+          //     width: calc(100% + 8px);
+          //     height: 100%;
+          //     border-left: 3px solid var(--bg-color);
+          //     right: -8px;
+          //     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+          //   }
+
+          //   @keyframes cursor {
+          //     to {
+          //       border-left: 2px solid var(--primary-color);
+          //     }
+          //   }
+
+          //   @keyframes words {
+
+          //     0%,
+          //     20% {
+          //       content: 'Frontend Developer';
+          //     }
+
+          //     21%,
+          //     40% {
+          //       content: 'Web Developer';
+          //     }
+
+          //     41%,
+          //     60% {
+          //       content: 'UI / UX Designer';
+          //     }
+
+          //     61%,
+          //     80% {
+          //       content: 'Frontend Developer';
+          //     }
+
+          //     81%,
+          //     100% {
+          //       content: 'Web Developer';
+          //     }
+          //   }
+
+          //   @keyframes typing {
+
+          //     10%,
+          //     15%,
+          //     30%,
+          //     35%,
+          //     50%,
+          //     55%,
+          //     70%,
+          //     75%,
+          //     90%,
+          //     95% {
+          //       width: 0;
+          //     }
+
+          //     5%,
+          //     20%,
+          //     25%,
+          //     40%,
+          //     45%,
+          //     60%,
+          //     65%,
+          //     80%,
+          //     85% {
+          //       width: calc(100% + 8px);
+          //     }
+          //   }
+        }
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        // background-color: gray;
+
+        button {
+          padding: 10px 40px;
+          min-width: fit-content;
+        }
+      }
+    }
+
+    .hero-img-container {
+      width: 40vw;
+      min-height: 300px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .bg-blob {
+        position: relative;
+        width: 75%;
+        height: 75%;
+        min-width: 200px;
+        min-height: 300px;
+        max-width: 350px;
+        max-height: 375px;
+
+        // height: 300px;
+        background-color: var(--primary-color);
+        border-radius: 49% 51% 52% 48% / 23% 23% 77% 77%;
+        // border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .hero-img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        // top: -50px;
+      }
+    }
+
+  }
+
+  // @media screen and (max-width: 768px) {
+  //   .hero-container {
+  //     flex-direction: column-reverse;
+  //     align-items: center;
+
+  //     .my-details {
+  //       width: 100%;
+  //       // padding: 0 50px;
+  //     }
+
+  //     .hero-img-container {
+  //       width: 75vw;
+  //       height: 50vh;
+  //     }
+  //   }
+  // }
+}
+
+// @media screen and (max-width: 450px) {
+//   .my-details {
+//     .hero-roles {
+//       font-size: 25px !important;
+//     }
+//   }
+// }

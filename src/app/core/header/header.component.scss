@@ -5,6 +5,7 @@
   top: 0;
   width: 100%;
   z-index: 10;
+  border-bottom: 1px solid #4f4f4f85;
   // backdrop-filter: blur(10px);
 
   .name {
@@ -26,78 +27,109 @@
   }
 
   .navbar {
+    column-gap: 10px;
+    padding: 0;
+
     .active .link {
       color: var(--primary-color) !important;
 
       &::after {
-        transform: scale(1, 1);
+        transform: scale(1, 1) !important;
       }
     }
 
-    .link {
-      position: relative;
-      color: var(--text-color);
-      font-weight: 700;
-      padding: 5px 0;
+    .menu-list {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
 
-      &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: var(--primary-color);
-        left: 0;
-        bottom: 0;
-        transform: scale(0, 1);
-        transform-origin: 0% 100%;
-        transition: transform 0.3s ease;
-      }
+      li {
+        padding: 0px 5px;
 
-      &:hover {
-        color: var(--primary-color) !important;
-        transform: color .3s ease;
+        .link {
+          position: relative;
+          color: var(--text-color);
+          font-weight: 400;
+          padding: 5px 0;
+          text-transform: capitalize;
 
-        &::after {
-          transform: scale(1, 1);
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+            left: 0;
+            bottom: 0;
+            transform: scale(0, 1);
+            transform-origin: 0% 100%;
+            transition: transform 0.3s ease;
+          }
+
+          &:hover {
+            color: var(--primary-color) !important;
+            transform: color .3s ease;
+
+            &::after {
+              transform: scale(1, 1);
+            }
+          }
         }
       }
     }
-  }
 
-  .menu-icon {
-    display: none;
-    border: none;
-    background-color: transparent;
-    z-index: 1;
-
-    & .icon-menu,
-    & .icon-close {
-      color: var(--text-color);
-      font-size: 22px;
+    .switch {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
       cursor: pointer;
+
+      input {
+        opacity: 1;
+        width: 0;
+        height: 0;
+        border: 1 solid;
+
+        &::before {
+          font-family: "Material Icons";
+          font-size: 27px;
+          color: var(--text-color);
+          display: inline-block;
+          line-height: 30px;
+          height: 30px;
+        }
+
+        &:checked::before {
+          content: "\e51c";
+        }
+
+        &:not(:checked)::before {
+          content: "\e518";
+        }
+      }
     }
 
-    input[type="checkbox"] {
-      appearance: none;
+    .menu-icon {
+      display: none;
+      border: none;
+      background-color: transparent;
+      z-index: 1;
+
+      & .icon-menu,
+      & .icon-close {
+        color: var(--text-color);
+        font-size: 22px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] {
+        appearance: none;
+      }
     }
   }
 
-
-  .menu-list {
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      padding: 0px 5px;
-    }
-
-    a {
-      color: var(--text-color)
-    }
-  }
 
   @media screen and (max-width: 768px) {
 
@@ -138,7 +170,7 @@
     //   justify-content: space-between;
     // }
     .menu-icon {
-      display: block;
+      display: block !important;
     }
 
     .icon-close {
@@ -161,7 +193,6 @@
       right: 5px;
     }
   }
-
 
   // .nav {
   //   gap: 20px;

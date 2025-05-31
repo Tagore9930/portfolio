@@ -1,5 +1,5 @@
-<div class="journeys bg-color" id="journey">
-  <header class="container">
+<div class="journeys-section bg-color" id="journey">
+  <header class="container-sm">
     <h3 class="navigation-title m-0">
       {{(isExperience) ? 'Experience' : 'Education'}}
       <span>Journey</span>
@@ -16,8 +16,8 @@
     </div>
   </header>
 
-  <main class="journeys-container container">
-    <div class="row gap-5 journeys-section">
+  <main class="journeys-container container-sm">
+    <div class="row gap-5 journey-cards">
       <mat-card class="journey-card" *ngFor="let journey of journeys">
         <mat-card-header class="mb-3">
           <mat-card-title class="d-flex justify-content-between">
@@ -28,6 +28,9 @@
           </mat-card-title>
           <mat-card-subtitle>
             <span>{{journey.organization}} – ( {{journey.location}} )</span>
+            <span class="jny-duration">{{journey.duration.start | date: 'MMM YYYY'}} – {{(journey.duration.end) ?
+              (journey.duration.end |
+              date: 'MMM yyyy') : 'Present'}}</span>
           </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
@@ -36,8 +39,8 @@
             <li *ngFor="let bltPoint of journey.bulletPoints" class="lh-lg">{{bltPoint}}</li>
           </ul>
         </mat-card-content>
-        <mat-card-actions>
-          <a mat-stroked-button color="primary" class="rounded-pill border-white me-2"
+        <mat-card-actions class="d-flex flex-wrap gap-2">
+          <a mat-stroked-button color="primary" class="rounded-pill border-white text-nowrap"
             *ngFor="let skill of journey.topSkills" [href]="skill.officalLink" target="_blank">{{skill.name}}</a>
         </mat-card-actions>
       </mat-card>

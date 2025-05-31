@@ -8,12 +8,13 @@
       </div>
       <div class="navbar">
         <ul class="menu-list">
-          <li class="active" #navLink><a href="#home" class="link" (click)="updateHeaderActive($event)">Home</a></li>
-          <li #navLink><a href="#about" class="link" (click)="updateHeaderActive($event)">About</a></li>
-          <li #navLink><a href="#journey" class="link" (click)="updateHeaderActive($event)">Journey</a></li>
-          <li #navLink><a href="#projects" class="link" (click)="updateHeaderActive($event)">Featured Projects</a></li>
-          <li #navLink><a href="#contact" class="link" (click)="updateHeaderActive($event)">Contact</a></li>
+          <li [class.active]="i === 0" #navLink *ngFor="let link of sections; let i = index">
+            <a [href]="'#' + link" class="link" (click)="updateHeaderActive($event)">{{link}}</a>
+          </li>
         </ul>
+        <label class="switch">
+          <input type="checkbox" id="theme" name="themepicker" data-theme-toggle value="false">
+        </label>
         <button class="menu-icon">
           <label for="dropdown">
             <i class='bx bx-menu icon-menu'></i>
@@ -23,10 +24,6 @@
         </button>
       </div>
     </div>
-    <label class="switch">
-      <input type="checkbox" id="theme" name="themepicker" data-theme-toggle value="false">
-      <span class="slider round"></span>
-    </label>
     <!-- </div> -->
     <!-- </div> -->
   </div>

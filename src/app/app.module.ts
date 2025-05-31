@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
-import { HomeComponent } from './components/home/home.component';
+import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { MyJourneyComponent } from './components/my-journeys/my-journeys.component';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +19,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
+    HeroComponent,
     AboutComponent,
     MyJourneyComponent,
     ProjectsComponent,

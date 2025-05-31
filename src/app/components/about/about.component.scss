@@ -1,24 +1,25 @@
-.about {
+.about-section {
   padding: 60px 0;
-  height: 100%;
+  // height: 100%;
 
   // .col-md-6 {
   //   background-color: aqua;
   // }
 
-  .container {
+  .about-container {
     display: flex;
     gap: 60px;
     // align-items: center;
 
     .information {
-      text-align: justify;
+      // text-align: justify;
       width: 50%;
       vertical-align: middle;
 
       .description {
         color: var(--text-color);
         font-size: 20px;
+        font-weight: 400;
         margin: 0;
         line-height: 1.5;
 
@@ -27,66 +28,15 @@
         }
       }
 
-      .social-icons {
-        display: flex;
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 45px;
-          height: 45px;
-          background-color: transparent;
-          border: 2px solid var(--primary-color);
-          font-size: 27px;
-          border-radius: 50%;
-          color: var(--primary-color);
-          margin: 25px 15px 25px 0;
-          transition: 0.3s ease-in-out;
-        }
-
-        a:hover {
-          color: var(--bg-color);
-          transform: scale(1.3)translateY(-5px);
-          // box-shadow: 0 0 25px var(--primary-color);
-          background-color: var(--primary-color);
-        }
-      }
-
       .action-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
         // background-color: gray;
 
-        .btn-1,
-        .btn-2 {
+        button {
           padding: 10px 40px;
-          font-size: 18px;
-          font-weight: 600;
-          border: 2px solid var(--primary-color);
-          border-radius: 50px;
-          margin-right: 10px;
-          color: var(--bg-color);
-          overflow: hidden;
-          transition: background-color 350ms ease-in-out;
-        }
-
-        .btn-1 {
-          background-color: var(--primary-color);
-          // box-shadow: 0 0 25px var(--primary-color);
-
-          &:hover {
-            background-color: transparent;
-            color: var(--primary-color);
-          }
-        }
-
-        .btn-2 {
-          color: var(--primary-color);
-          background-color: transparent;
-
-          &:hover {
-            // background-color: var(--primary-color);
-            color: var(--bg-color);
-          }
+          min-width: fit-content;
         }
       }
     }
@@ -99,6 +49,7 @@
       .skills-list {
         display: flex;
         flex-wrap: wrap;
+        gap: 5px;
 
         .skill {
           display: flex;
@@ -109,9 +60,13 @@
           height: 90px;
           gap: 5px;
           transition: all 200ms linear;
+          color: var(--text-color);
+          cursor: pointer;
 
           &:hover {
             transform: translateY(-5px) scale(1.1);
+            background-color: var(--second-bg-color);
+            border-radius: 8px;
           }
 
 

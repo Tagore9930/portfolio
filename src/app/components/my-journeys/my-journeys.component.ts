@@ -3,7 +3,7 @@ import { JourneyType } from 'src/app/Types/app-types';
 @Component({
   selector: 'my-journeys',
   templateUrl: './my-journeys.component.html',
-  styleUrls: ['./my-journeys.component.scss']
+  styleUrls: ['./my-journeys.component.scss', '../../developer.scss']
 })
 export class MyJourneyComponent implements OnInit {
   public isExperience: boolean = true;

@@ -1,4 +1,4 @@
-<div class="projects-section bg-color" id="projects">
+<div class="projects-section" id="projects">
   <header>
     <h3 class="navigation-title">
       Featured
@@ -8,16 +8,32 @@
 
   <main class="projects-container container">
     <div class="projects-list row">
-      <div *ngFor="let project of projectsList" class="project">
-        <img [src]="project?.gif" alt="project preview" class="project-image" />
-        <div class="project-info">
-          <h4 class="project-title">{{ project.name }}</h4>
-          <p class="project-description">{{ project.description }}</p>
-          <a [href]="project.link" target="_blank" class="project-github">
-            <i class="bi bi-github"></i>
-          </a>
-        </div>
+      <div class="project-layer px-1 col-4" *ngFor="let project of projectsList">
+        <mat-card class="project-card">
+          <img mat-card-image [src]="project?.media" alt="Project Screenshot" class="rounded-0 project-media">
+
+          <mat-card-header>
+            <mat-card-title>{{project?.name}}</mat-card-title>
+            <!-- <mat-card-subtitle>Fun Dice Game Built with JavaScript</mat-card-subtitle> -->
+          </mat-card-header>
+
+          <mat-card-content>
+            <p>{{project?.description}}</p>
+          </mat-card-content>
+
+          <mat-card-actions class="projects-actions">
+            <button class="icon-button" mat-raised-button color="primary" (click)="openLink(project.hostLink)">
+              <span class="material-symbols-outlined custom-icon-style">open_in_new</span>
+              <span class="icon-text">Visit</span>
+            </button>
+            <button class="icon-button" mat-raised-button color="primary" (click)="openLink(project.sourceLink)">
+              <i class="bi bi-github custom-icon-style"></i>
+              <span class="icon-text">Source</span>
+            </button>
+          </mat-card-actions>
+        </mat-card>
       </div>
+
     </div>
   </main>
 </div>

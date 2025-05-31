@@ -1,6 +1,6 @@
-<div class="about bg-color" id="about">
+<div class="about-section bg-color" id="about">
   <h3 class="navigation-title">About <span>Me</span></h3>
-  <div class="container h-100">
+  <div class="container-sm about-container h-100">
     <div class="information">
       <p class="description">
         Frontend Engineer with hands-on experience in building responsive, user-friendly web applications using Angular
@@ -21,18 +21,18 @@
       </div>
 
       <div class="action-buttons">
-        <button class="btn-1 btn-slide-animation slide-transparent"
+        <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent"
           (click)="window.open('https://drive.google.com/file/d/1Z9tNvrBWE7y3qvFkV0yW7DaxlUOMD7pu/view?usp=drive_link', '_blank')">Resume</button>
-        <button class="btn-2 btn-slide-animation slide-main">Contact</button>
+        <button class="ctm-basic-btn ctm-btn-style-2 btn-slide-animation slide-main">Contact</button>
       </div>
     </div>
     <div class="skills">
       <h4 class="ms-1 fs-5 fw-b">Skills</h4>
       <div class="skills-list">
-        <div class="skill" *ngFor="let skill of skillsList">
+        <a [href]="skill?.officalSite" target="_blank" class="skill" *ngFor="let skill of skillsList">
           <img src="assets/skills/{{skill.sillImg}}" alt="{{skill.skillName}} Image" class="skill-img">
           <p class="skill-name">{{ skill.skillName }}</p>
-        </div>
+        </a>
       </div>
     </div>
   </div>
