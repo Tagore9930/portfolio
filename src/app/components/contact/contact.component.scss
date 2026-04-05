@@ -15,22 +15,35 @@
       display: flex;
       flex-direction: column;
 
+    }
+
+    .input-group-box,
+    .input-group-2 {
       .input-box {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
         flex-wrap: wrap;
 
+        &:has(input[required]) label::after {
+          content: " *";
+          color: red;
+        }
+
+        &:not(:has(input[required])) label::after {
+          content: " (Optional)";
+          color: gray;
+        }
+
+        label {
+          color: var(--text-color);
+          text-align: left;
+          margin-top: 10px;
+        }
       }
     }
 
     .input-group-2 {
-
-      .input-box {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-      }
 
       button {
         padding: 10px 40px;
@@ -47,10 +60,14 @@
       color: var(--text-color);
       background-color: var(--second-bg-color);
       border-radius: 10px;
-      border: 2px solid var(--main-color);
+      border: solid var(--second-bg-color);
       margin: 5px 0;
       resize: none;
       display: block;
+
+      &:focus {
+        border-color: var(--primary-color) !important;
+      }
     }
   }
 

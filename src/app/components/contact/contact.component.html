@@ -5,24 +5,33 @@
       <span>Me</span>
     </h3>
   </header>
-  <form action="" class="container contact-container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="container contact-container">
     <div class="input-group-box">
       <div class="input-box">
-        <input type="text" placeholder="Full Name">
+        <label>Full Name</label>
+        <input type="text" placeholder="Ex: John Doe" formControlName="fullName" required>
       </div>
       <div class="input-box">
-        <input type="email" placeholder="Email">
+        <label>Email</label>
+        <input type="email" placeholder="Ex: example@gmail.com" formControlName="email" required>
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Phone Number">
-      </div>
-      <div class="input-box">
-        <input type="text" placeholder="Subject">
+        <label>Subject</label>
+        <input type="text" placeholder="Ex: Build startup website" formControlName="subject" required>
       </div>
     </div>
     <div class="input-group-2">
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-      <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent">Send Message</button>
+      <div class="input-box">
+        <label>Subject</label>
+        <input type="number" placeholder="Ex: +91 123456789" formControlName="phoneNumber">
+      </div>
+      <div class="input-box">
+        <label>Subject</label>
+        <textarea name="" id="" cols="30" rows="6" placeholder="Your Message" formControlName="message"></textarea>
+      </div>
+      <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent" type="submit"
+        [disabled]="isFormSubmitting">Send
+        Message</button>
     </div>
   </form>
   <div class="social-icons">
