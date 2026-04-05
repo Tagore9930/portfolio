@@ -1,10 +1,18 @@
-<div class="portfolio">
+<div class="portfolio" [ngStyle]="{ 'pointer-events': loaderService.getLoadingState ? 'none' : ''}">
+  <div class="snackbar" #snackbarId>
+    <p class="snackbar-info">Details is invalid</p>
+    <span class="snackbar--close">✕</span>
+  </div>
+
+  <div class="loader-section" *ngIf="loaderService.getLoadingState">
+    <mat-spinner></mat-spinner>
+  </div>
+
   <my-header></my-header>
   <hero></hero>
   <about></about>
   <my-journeys></my-journeys>
   <projects></projects>
   <contact></contact>
-</div>
 
-<!-- Testing new branch(develop) code push. -->
+</div>
