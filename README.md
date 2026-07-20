@@ -40,11 +40,20 @@ Welcome to my personal portfolio! This repository contains the source code for m
 - 🎨 Clean and modern UI design
 - ⚡ Fast loading and smooth transitions
 - 📂 Dynamic project section (easily updatable)
-- 📧 Contact with Mail, linkedIn, Whatsapp, GitHub
+- 📧 Contact with email integration (Formspree), Mail, linkedIn, Whatsapp, GitHub
 - 🌙 Dark/Light mode (optional)
 <!-- - 📧 Contact form with email integration (EmailJS/Formspree) -->
 
 ---
+
+## 🗺️ Planned Features
+
+🚧 **Exciting improvements planned for upcoming releases:**
+
+- [ ] 🗂️ **Shared Data Service** – Centralize and reuse application data across the portfolio.
+- [ ] 🚀 **GitHub API Integration** – Automatically showcase newly added projects and repositories.
+- [ ] 🔄 **Profile Sync** – Keep Education, Experience, and Certifications up to date using a supported data source.
+- [ ] 🎨 **Theme Customization** – Choose from multiple color themes with an interactive theme picker.
 
 ## 🧑‍💻 About Me
 
