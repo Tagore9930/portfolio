@@ -18,6 +18,19 @@
   place-items: center;
 }
 
+::ng-deep .main-section {
+  transition: transform 1s, opacity 1s;
+
+  &:has(.hero-section) {
+    height: 100%;
+  }
+
+  &.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}
+
 .snackbar {
   position: fixed;
   inset: 5px 5px auto auto;

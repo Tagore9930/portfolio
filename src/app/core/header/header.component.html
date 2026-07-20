@@ -8,7 +8,7 @@
       </div>
       <div class="navbar">
         <ul class="menu-list">
-          <li [class.active]="i === 0" #navLink *ngFor="let link of sections; let i = index">
+          <li [class]="link" #navLink *ngFor="let link of sections; let i = index">
             <a [href]="'#' + link" class="link" (click)="updateHeaderActive($event)">{{link}}</a>
           </li>
         </ul>

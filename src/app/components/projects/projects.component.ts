@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   public projectsList: { name: string, description: string, hostLink: string, sourceLink: string, media: any }[] = [
     {
+      name: '🗺️ Mapty',
+      description: 'An interactive map application built with JavaScript that allows users to log, track, and visualize running and cycling workouts on an interactive map using geolocation and local storage.',
+      hostLink: 'https://tagore-mapty.vercel.app/',
+      media: '/assets/project-assets/mapty.png',
+      sourceLink: 'https://github.com/Tagore9930/mapty'
+    },
+    {
       name: '🐕 Pet Safety Tracker',
       description: 'A responsive Angular web app that helps pet owners remotely monitor and manage their pets\' safety and care tasks, deployed on Vercel.',
       hostLink: 'https://pets-safety-app.vercel.app/',
