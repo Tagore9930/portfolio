@@ -108,6 +108,21 @@ body {
   background-color: var(--second-bg-color);
 }
 
+img:before {
+  position: absolute;
+  content: "😔 Sorry! The " attr(alt) " image is broken" !important;
+  background-color: var(--second-bg-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  width: 100%;
+  padding: 1em 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 0.45em #ffffff, 0 1.2em 3.6em rgba(1, 7, 60, 0.3);
+  height: 100%;
+}
+
 /*--------------| Slider Design |----------------*/
 
 .btn-slide-animation {

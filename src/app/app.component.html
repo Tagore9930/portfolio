@@ -8,11 +8,24 @@
     <mat-spinner></mat-spinner>
   </div>
 
-  <my-header></my-header>
-  <hero></hero>
-  <about></about>
-  <my-journeys></my-journeys>
-  <projects></projects>
-  <contact></contact>
+  <my-header #appHeader></my-header>
+  <div #section id="hero" class="main-section">
+    <hero></hero>
+  </div>
 
+  <div #section id="about" class="main-section">
+    <about></about>
+  </div>
+
+  <div #section id="journey" class="main-section">
+    <my-journeys></my-journeys>
+  </div>
+
+  <div #section id="projects" class="main-section">
+    <projects></projects>
+  </div>
+
+  <div #section id="contact" class="main-section">
+    <contact></contact>
+  </div>
 </div>
