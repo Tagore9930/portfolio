@@ -1,3 +1,4 @@
+import { DataService } from './../../services/data.service';
 import { ContactUsService } from './../../services/contact-us.service';
 import { LoaderService } from './../../services/loader.service';
 import { Component } from '@angular/core';
@@ -20,6 +21,7 @@ export class ContactComponent {
     private contactUsService: ContactUsService,
     private snackbarService: SnackbarService,
     private loaderService: LoaderService,
+    public dataService: DataService
   ) {
     this.contactForm = fb.group({
       email: ['', Validators.compose([Validators.required, Validators.email])],

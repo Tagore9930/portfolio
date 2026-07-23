@@ -35,18 +35,13 @@
     </div>
   </form>
   <div class="social-icons">
-    <a href="https://www.linkedin.com/in/tagore-banda/" target="_blank" class="btn-slide-animation slide-main"><i
-        class='bx bxl-linkedin'></i></a>
-    <a href="https://github.com/tagore9930" target="_blank" class="btn-slide-animation slide-main"><i
-        class='bx bxl-github'></i></a>
-    <a href="https://api.whatsapp.com/send?phone=918904356993" target="_blank" class="btn-slide-animation slide-main"><i
-        class='bx bxl-whatsapp'></i></a>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tagore9930@gmail.com" target="_blank"
-      class="btn-slide-animation slide-main"><i class='bx bxl-gmail'></i></a>
+    <a *ngFor="let media of dataService?.socialMedias;" [href]="media?.link" target="_blank"
+      class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media?.icon"></i>
+    </a>
   </div>
   <div class="copy-right-section text-center">
-    Super-powered by Banda Tagore © 2025 •
-    <a href="https://github.com/Tagore9930/portfolio">source code</a>
-    <p><small>Last updated: July 20, 2026</small></p>
+    Super-powered by {{dataService.name}} © {{dataService.portfolioCreatedYear}} •
+    <a [href]="dataService.portfolioRepoLink">source code</a>
+    <p><small>Last updated: {{dataService.lastPortfolioUpdateDate}}</small></p>
   </div>
 </div>

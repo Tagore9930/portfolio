@@ -8,13 +8,12 @@
 
   <main class="projects-container container">
     <div class="projects-list row">
-      <div class="project-layer px-1 col-4" *ngFor="let project of projectsList">
+      <div class="project-layer px-1 col-4" *ngFor="let project of dataService?.projects">
         <mat-card class="project-card">
           <img mat-card-image [src]="project?.media" alt="Project Screenshot" class="rounded-0 project-media">
 
           <mat-card-header>
             <mat-card-title>{{project?.name}}</mat-card-title>
-            <!-- <mat-card-subtitle>Fun Dice Game Built with JavaScript</mat-card-subtitle> -->
           </mat-card-header>
 
           <mat-card-content>
@@ -27,7 +26,7 @@
               <span class="icon-text">Visit</span>
             </button>
             <button class="icon-button" mat-raised-button color="primary" (click)="openLink(project.sourceLink)">
-              <i class="bi bi-github custom-icon-style"></i>
+              <i class="bx bxl-github custom-icon-style"></i>
               <span class="icon-text">Source</span>
             </button>
           </mat-card-actions>

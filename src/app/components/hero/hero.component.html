@@ -1,41 +1,26 @@
 <div class="hero-section">
   <div class="container-sm hero-container d-flex h-100 gap-2">
-    <!-- <div class="d-flex  h-100"> -->
-    <!-- <div class="col-md-6 h-100"> -->
     <div class="my-details">
-      <h3 class="hero-name">Hi, I'm <span>Banda Tagore</span></h3>
+      <h3 class="hero-name">Hi, I'm <span>{{dataService.name}}</span></h3>
       <h2 class="hero-roles">I am a <span #typedElement></span>
       </h2>
-      <p class="hero-message mb-0">
-        A passionate Frontend Developer with 3+ years of experience in crafting responsive, dynamic web applications
-        using Angular. I specialize in building intuitive user interfaces that deliver seamless user experiences.
-      </p>
+      <p class="hero-message mb-0">{{dataService.heroSmallAbout}}</p>
       <div class="social-icons">
-        <a href="https://www.linkedin.com/in/tagore-banda/" target="_blank" class="btn-slide-animation slide-main"><i
-            class='bx bxl-linkedin'></i></a>
-        <a href="https://github.com/tagore9930" target="_blank" class="btn-slide-animation slide-main"><i
-            class='bx bxl-github'></i></a>
-        <a href="https://api.whatsapp.com/send?phone=918904356993" target="_blank"
-          class="btn-slide-animation slide-main"><i class='bx bxl-whatsapp'></i></a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tagore9930@gmail.com" target="_blank"
-          class="btn-slide-animation slide-main"><i class='bx bxl-gmail'></i></a>
+        <a *ngFor="let media of dataService?.socialMedias;" [href]="media?.link" target="_blank"
+          class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media?.icon"></i>
+        </a>
       </div>
 
       <div class="action-buttons">
         <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent"
-          (click)="window.open('https://drive.google.com/file/d/1Z9tNvrBWE7y3qvFkV0yW7DaxlUOMD7pu/view?usp=drive_link', '_blank')">Resume</button>
+          (click)="window.open(dataService.resumeLink, '_blank')">Resume</button>
         <button class="ctm-basic-btn ctm-btn-style-2 btn-slide-animation slide-main">Contact</button>
       </div>
     </div>
-    <!-- </div> -->
-    <!-- <div class="col-md-6 h-100"> -->
     <div class="hero-img-container">
-      <!-- New photo style https://codepen.io/atapas/pen/abZbvpp -->
       <div class="bg-blob">
         <img src="/assets/profile-img-no-background.png" class="hero-img" alt="Hero-Image">
       </div>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
   </div>
 </div>

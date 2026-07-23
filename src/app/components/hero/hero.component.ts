@@ -1,3 +1,4 @@
+import { DataService } from './../../services/data.service';
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import Typed from 'typed.js';
 
@@ -12,16 +13,11 @@ export class HeroComponent implements OnInit, OnDestroy {
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef<HTMLSpanElement>; // Reference to the HTML element
   typed: Typed | undefined; // To hold the Typed.js instance
 
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
     const options = {
-      strings: [
-        "Front-End Engineer.",
-        "Web Developer.",
-        "UI / UX Developer.",
-        "Passionate Coder."
-      ],
+      strings: this.dataService.roles,
       typeSpeed: 75,       // Typing speed in milliseconds
       backSpeed: 50,       // Backspacing speed in milliseconds
       backDelay: 1500,     // Time before backspacing in milliseconds

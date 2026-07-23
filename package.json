@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
     "@types/typed.js": "^2.0.0",
+    "bootstrap": "^5.3.8",
+    "boxicons": "^2.1.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "typed.js": "^2.1.0",

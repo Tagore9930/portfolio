@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     this.sectionObserver = new IntersectionObserver(this.revealSection?.bind(this), {
       root: null,
-      threshold: 0.15,
+      threshold: .25,
     });
 
     this.sections.forEach((section) => {
