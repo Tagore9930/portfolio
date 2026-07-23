@@ -1,8 +1,4 @@
 <div class="portfolio" [ngStyle]="{ 'pointer-events': loaderService.getLoadingState ? 'none' : ''}">
-  <div class="snackbar" #snackbarId>
-    <p class="snackbar-info">Details is invalid</p>
-    <span class="snackbar--close">✕</span>
-  </div>
 
   <div class="loader-section" *ngIf="loaderService.getLoadingState">
     <mat-spinner></mat-spinner>

@@ -11,8 +11,6 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
   styleUrls: ['./contact.component.scss', '../../developer.scss'],
 })
 export class ContactComponent {
-  window = window;
-
   public contactForm!: FormGroup;
   public isFormSubmitting: boolean = false;
 
@@ -33,14 +31,11 @@ export class ContactComponent {
   }
 
   public onSubmit() {
-    console.log(this.contactForm);
-
     if (this.contactForm.invalid) {
       this.snackbarService.showSnackbar(
         'error',
-        'Please fill required fields.',
+        'Please fill required fields correctly.',
       );
-
       return;
     }
 
@@ -51,14 +46,17 @@ export class ContactComponent {
       this.contactUsService.submitForm(this.contactForm.value).subscribe({
         next: () => {
           this.loaderService.setloadingState = false;
-          this.snackbarService.showSnackbar('success', 'Submited successfully');
+          this.snackbarService.showSnackbar('success', 'Submitted successfully');
           this.isFormSubmitting = false;
+          this.contactForm.reset();
         },
-        error: () => {
+        error: (err) => {
+          const firstErr = err?.error?.errors?.[0];
+
           this.loaderService.setloadingState = false;
           this.snackbarService.showSnackbar(
             'error',
-            'Something went wrong, Please try again.',
+            firstErr ? `${String(firstErr?.field)?.toUpperCase()}: ${firstErr?.message}` : "Something went wrong, Please try again.",
           );
           this.isFormSubmitting = false;
         },

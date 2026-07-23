@@ -8,12 +8,23 @@ import Typed from 'typed.js';
   styleUrls: ['./hero.component.scss', '../../developer.scss']
 })
 export class HeroComponent implements OnInit, OnDestroy {
-  window = window;
-
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef<HTMLSpanElement>; // Reference to the HTML element
   typed: Typed | undefined; // To hold the Typed.js instance
 
   constructor(public dataService: DataService) { }
+
+  public openResume(): void {
+    if (this.dataService.resumeLink) {
+      window.open(this.dataService.resumeLink, '_blank');
+    }
+  }
+
+  public scrollToContact(): void {
+    const contactEle = document.getElementById('contact');
+    if (contactEle) {
+      contactEle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
   ngOnInit(): void {
     const options = {

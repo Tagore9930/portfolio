@@ -23,25 +23,24 @@
     <div class="input-group-2">
       <div class="input-box">
         <label>Mobile/Phone number</label>
-        <input type="number" placeholder="Ex: +91 1234567890" formControlName="phoneNumber">
+        <input type="tel" placeholder="Ex: +91 1234567890" formControlName="phoneNumber">
       </div>
       <div class="input-box">
         <label>Message</label>
-        <textarea name="" id="" cols="30" rows="6" placeholder="Your Message" formControlName="message"></textarea>
+        <textarea cols="30" rows="6" placeholder="Your Message" formControlName="message"></textarea>
       </div>
       <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent" type="submit"
-        [disabled]="isFormSubmitting">Send
-        Message</button>
+        [disabled]="isFormSubmitting">Send Message</button>
     </div>
   </form>
   <div class="social-icons">
-    <a *ngFor="let media of dataService?.socialMedias;" [href]="media?.link" target="_blank"
-      class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media?.icon"></i>
+    <a *ngFor="let media of dataService.socialMedias" [href]="media.link" target="_blank" rel="noopener noreferrer"
+      [attr.aria-label]="media.name" class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media.icon"></i>
     </a>
   </div>
   <div class="copy-right-section text-center">
     Super-powered by {{dataService.name}} © {{dataService.portfolioCreatedYear}} •
-    <a [href]="dataService.portfolioRepoLink">source code</a>
+    <a [href]="dataService.portfolioRepoLink" target="_blank" rel="noopener noreferrer">source code</a>
     <p><small>Last updated: {{dataService.lastPortfolioUpdateDate}}</small></p>
   </div>
 </div>

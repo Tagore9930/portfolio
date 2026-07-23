@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss', '../../developer.scss']
 })
 export class AboutComponent {
-
-  public window: any = window;
-
   constructor(public dataService: DataService) { }
+
+  public openResume(): void {
+    if (this.dataService.resumeLink) {
+      window.open(this.dataService.resumeLink, '_blank');
+    }
+  }
+
+  public scrollToContact(): void {
+    const contactEle = document.getElementById('contact');
+    if (contactEle) {
+      contactEle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

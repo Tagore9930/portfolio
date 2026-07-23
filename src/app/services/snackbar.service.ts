@@ -1,48 +1,23 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SnackbarService {
-  private snackbarEle!: HTMLDivElement;
-  private snackbarTimeout!: ReturnType<typeof setTimeout>;
+  constructor(private snackBar: MatSnackBar) { }
 
-  public set setSnackbarEle(ele: HTMLDivElement) {
-    if (!ele) {
-      console.error('Snackbar ele ref is not fetched correctly');
-      return;
-    }
-    this.snackbarEle = ele;
-
-    if (this.snackbarEle) {
-      const closeBtn = this.snackbarEle.querySelector('.snackbar--close');
-
-      if (!closeBtn) return;
-      closeBtn.addEventListener('click', this.removeSnackbar.bind(this));
-    }
+  public showSnackbar(type: 'success' | 'warning' | 'error', message: string): void {
+    this.snackBar.open(message, 'Close', {
+      duration: 4000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      panelClass: [`snackbar-${type}`],
+    });
   }
 
-  constructor() {}
-
-  public showSnackbar(type: 'success' | 'warning' | 'error', message: string) {
-    this.removeSnackbar();
-    console.log('showSnackbar is called');
-
-    const snackbarInfoTextEle =
-      this.snackbarEle.querySelector('.snackbar-info');
-    snackbarInfoTextEle && (snackbarInfoTextEle.textContent = message);
-    this.snackbarEle.classList.add(type);
-
-    this.snackbarTimeout = setTimeout(() => {
-      this.removeSnackbar();
-    }, 4000);
-  }
-
-  public removeSnackbar() {
-    this.snackbarEle?.classList?.remove('success', 'warning', 'error');
-    const snackbarInfoTextEle =
-      this.snackbarEle?.querySelector('.snackbar-info');
-    snackbarInfoTextEle && (snackbarInfoTextEle.textContent = '');
-    clearTimeout(this.snackbarTimeout);
+  public removeSnackbar(): void {
+    this.snackBar.dismiss();
   }
 }
+

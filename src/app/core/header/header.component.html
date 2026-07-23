@@ -1,21 +1,19 @@
 <div class="header">
   <div class="container-lg">
-    <!-- <div class="row"> -->
-    <!-- <div class="col-12"> -->
     <div class="d-flex justify-content-between">
       <div class="logo">
         <h2 class="name">Tagore <span class="last-name">Banda</span></h2>
       </div>
       <div class="navbar">
         <ul class="menu-list">
-          <li [class]="link" #navLink *ngFor="let link of sections; let i = index">
-            <a [href]="'#' + link" class="link" (click)="updateHeaderActive($event)">{{link}}</a>
+          <li [class]="link" #navLink *ngFor="let link of sections">
+            <a [href]="'#' + link" class="link" (click)="updateHeaderActive(link, $event)">{{link}}</a>
           </li>
         </ul>
-        <label class="switch">
-          <input type="checkbox" id="theme" name="themepicker" data-theme-toggle value="false">
+        <label class="switch" aria-label="Theme toggle">
+          <input type="checkbox" id="theme" name="themepicker" data-theme-toggle value="false" aria-label="Toggle theme">
         </label>
-        <button class="menu-icon">
+        <button class="menu-icon" aria-label="Toggle navigation menu">
           <label for="dropdown">
             <i class='bx bx-menu icon-menu'></i>
             <i class='bx bx-x icon-close'></i>
@@ -24,12 +22,5 @@
         </button>
       </div>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
   </div>
-  <!-- <select data-theme-picker name="themepicker">
-    <option value="☀️">Light</option>
-    <option value="🌑">Dark</option>
-  </select> -->
-
-</div>
+</div>

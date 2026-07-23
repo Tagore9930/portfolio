@@ -14,44 +14,16 @@ import {
 export class HeaderComponent {
   @ViewChildren('navLink') public navLinks!: QueryList<ElementRef>;
 
+  public readonly sections: string[] = ['hero', 'about', 'journey', 'projects', 'contact'];
+
   constructor() { }
 
-  public updateHeaderActive(event: any): void {
-    const id = event?.target?.parentElement?.className;
-    const linkCon = document.querySelector(id);
-
-    console.log("event", event, linkCon, id);
-
-    linkCon?.scrollIntoView({ behavior: 'smooth' });
+  public updateHeaderActive(sectionId: string, event: Event): void {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
-
-  sections = ['hero', 'about', 'journey', 'projects', 'contact'];
-  tempSetTimeout: any = null;
-
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   let currentSection = '';
-  //   for (const id of this.sections) {
-  //     const element = document.getElementById(id);
-  //     if (element) {
-  //       const rect = element.getBoundingClientRect();
-  //       if (rect.top <= window.innerHeight / 2 && rect.bottom >= 10) {
-  //         currentSection = id;
-  //         break;
-  //       }
-  //     }
-  //   }
-  //   clearTimeout(this.tempSetTimeout);
-  //   this.tempSetTimeout = setTimeout(() => {
-  //     this.navLinks.forEach((navLink: ElementRef) => {
-  //       navLink.nativeElement.classList.remove('active');
-  //       if (
-  //         navLink.nativeElement?.children[0].getAttribute('href') ===
-  //         `#${currentSection}`
-  //       ) {
-  //         navLink.nativeElement.classList.add('active');
-  //       }
-  //     });
-  //   }, 20);
-  // }
 }
+

@@ -4,22 +4,23 @@
     <div class="information">
       <p class="description">{{dataService.aboutDescription}}</p>
       <div class="social-icons">
-        <a *ngFor="let media of dataService?.socialMedias;" [href]="media?.link" target="_blank"
-          class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media?.icon"></i>
+        <a *ngFor="let media of dataService.socialMedias" [href]="media.link" target="_blank" rel="noopener noreferrer"
+          [attr.aria-label]="media.name" class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media.icon"></i>
         </a>
       </div>
 
       <div class="action-buttons">
         <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent"
-          (click)="window.open(dataService.resumeLink, '_blank')">Resume</button>
-        <button class="ctm-basic-btn ctm-btn-style-2 btn-slide-animation slide-main">Contact</button>
+          (click)="openResume()" aria-label="Open Resume">Resume</button>
+        <button class="ctm-basic-btn ctm-btn-style-2 btn-slide-animation slide-main"
+          (click)="scrollToContact()" aria-label="Scroll to Contact Section">Contact</button>
       </div>
     </div>
     <div class="skills">
       <h4 class="ms-1 fs-5 fw-b">Skills</h4>
       <div class="skills-list">
-        <a [href]="skill?.officalSite" target="_blank" class="skill" *ngFor="let skill of dataService?.skills">
-          <img src="assets/skills/{{skill.img}}" alt="{{skill.name}} Image" class="skill-img">
+        <a [href]="skill.officalSite" target="_blank" rel="noopener noreferrer" class="skill" *ngFor="let skill of dataService.skills">
+          <img src="assets/skills/{{skill.img}}" alt="{{skill.name}} icon" class="skill-img">
           <p class="skill-name">{{ skill.name }}</p>
         </a>
       </div>

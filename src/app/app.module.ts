@@ -15,6 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -36,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCheckboxModule,
     MatProgressSpinnerModule,
-    FormsModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],

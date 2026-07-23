@@ -7,6 +7,7 @@ import { JourneyType } from '../Types/app-types';
 export class DataService {
 
   public readonly name: string = "Banda Tagore";
+  public readonly profileImg: string = "assets/profile-img-no-background.png";
 
   public readonly roles: string[] = [
     "Front-End Engineer.",

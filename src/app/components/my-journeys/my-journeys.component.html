@@ -41,39 +41,9 @@
         </mat-card-content>
         <mat-card-actions class="d-flex flex-wrap gap-2">
           <a mat-stroked-button color="primary" class="rounded-pill border-white text-nowrap"
-            *ngFor="let skill of journey.topSkills" [href]="skill.officalLink" target="_blank">{{skill.name}}</a>
+            *ngFor="let skill of journey.topSkills" [href]="skill.officalLink" target="_blank" rel="noopener noreferrer">{{skill.name}}</a>
         </mat-card-actions>
       </mat-card>
-      <!-- <div class="journey-div col-4" *ngFor="let myJourney of journeys">
-        <header>
-          <p class="journey-title">Frontend Angular Engineer</p>
-          <div>
-            <p style="margin: 0">Freelancer</p>
-            <div class="journey-duration">
-              <span>●</span>
-              <span>Jan 2024</span>
-              <span>-</span>
-              <span>Feb 2024</span>
-            </div>
-          </div>
-        </header>
-        <main>
-          <div class="journey-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            assumenda tempora nesciunt. Eos, beatae dolor provident, obcaecati
-            corporis nam tenetur sequi ratione iste perferendis eveniet
-            excepturi consequuntur doloremque nisi voluptatibus.
-          </div>
-          <div class="top-skills">
-            <span class="top-skills-title">Top Skills:</span>
-            <span>Angular,</span>
-            <span>Angular Material,</span>
-            <span>Html 5,</span>
-            <span>CSS,</span>
-            <span>Typesript</span>
-          </div>
-        </main>
-      </div> -->
     </div>
   </main>
 </div>

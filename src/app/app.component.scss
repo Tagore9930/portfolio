@@ -31,45 +31,20 @@
   }
 }
 
-.snackbar {
-  position: fixed;
-  inset: 5px 5px auto auto;
-  // top: 5px;
-  // left: calc(100% - 5px); // Please don't change to right: 0; because that is not working.
-  background-color: lightgray;
-  border-radius: 10px;
+::ng-deep .mdc-snackbar {
+  color: white;
 
-  display: flex;
-  justify-content: space-between;
-  /* width: fit-content; */
-  width: 300px;
-  padding: 5px;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 999;
-
-  &.error {
+  &.snackbar-error .mdc-snackbar__surface {
     background-color: rgb(255 0 24 / 80%);
-    color: white;
-    opacity: 1;
-    visibility: visible;
-    animation: hidePopup 5s forwards;
   }
 
-  &.warning {
+  &.snackbar-warning .mdc-snackbar__surface {
     background-color: rgb(255 192 0 / 80%);
     color: #000;
-    opacity: 1;
-    visibility: visible;
-    animation: hidePopup 5s forwards;
   }
 
-  &.success {
+  &.snackbar-success .mdc-snackbar__surface {
     background-color: rgb(38 220 80 / 80%);
-    color: white;
-    opacity: 1;
-    visibility: visible;
-    // animation: hidePopup 5s forwards;
   }
 
   .snackbar-info {
@@ -79,12 +54,8 @@
     margin: 0;
   }
 
-  .snackbar--close {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 5px;
-    cursor: pointer;
-    line-height: 1;
+  .mat-mdc-snack-bar-action .mdc-button__label {
+    color: white;
   }
 }
 
