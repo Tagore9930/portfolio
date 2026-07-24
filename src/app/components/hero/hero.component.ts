@@ -20,9 +20,9 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   public scrollToContact(): void {
-    const contactEle = document.getElementById('contact');
-    if (contactEle) {
-      contactEle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 

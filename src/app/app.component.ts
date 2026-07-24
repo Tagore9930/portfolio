@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     this.sections?.forEach((section) => {
       this.sectionObserver.observe(section.nativeElement);
-      section.nativeElement.classList.add('section--hidden');
+      // section.nativeElement.classList.add('section--hidden');
     });
   }
 
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
-      entry.target.classList.remove('section--hidden');
+      // entry.target.classList.remove('section--hidden');
       this.updateNavLink(entry.target.id);
     });
   }

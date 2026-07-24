@@ -3,7 +3,6 @@ import {
   ElementRef,
   ViewChildren,
   QueryList,
-  HostListener,
 } from '@angular/core';
 
 @Component({
@@ -20,10 +19,10 @@ export class HeaderComponent {
 
   public updateHeaderActive(sectionId: string, event: Event): void {
     event.preventDefault();
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 }
-

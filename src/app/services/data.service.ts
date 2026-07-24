@@ -92,6 +92,11 @@ export class DataService {
       officalSite: 'https://react.dev/'
     },
     {
+      img: "figma.png",
+      name: "figma",
+      officalSite: 'https://figma.com/'
+    },
+    {
       img: "c.png",
       name: "C",
       officalSite: 'https://www.c-language.org/'
@@ -130,6 +135,21 @@ export class DataService {
       img: "wrike.png",
       name: "wrike",
       officalSite: 'https://www.wrike.com/'
+    },
+    {
+      img: "fiverr.png",
+      name: "fiverr",
+      officalSite: 'https://www.fiverr.com/'
+    },
+    {
+      img: "upwork.png",
+      name: "upwork",
+      officalSite: 'https://www.upwork.com/'
+    },
+    {
+      img: "freelancer.png",
+      name: "freelancer",
+      officalSite: 'https://www.freelancer.com/'
     },
   ];
 
