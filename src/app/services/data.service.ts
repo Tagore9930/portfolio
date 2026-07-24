@@ -45,6 +45,25 @@ export class DataService {
 
   public readonly resumeLink: string = "https://drive.google.com/file/d/1Z9tNvrBWE7y3qvFkV0yW7DaxlUOMD7pu/view?usp=drive_link"
 
+  public readonly showcaseCards: { digit: number, type: string }[] = [
+    {
+      digit: 3,
+      type: "experience"
+    },
+    {
+      digit: 3,
+      type: "clients"
+    },
+    {
+      digit: 1,
+      type: "full time clients"
+    },
+    {
+      digit: 33,
+      type: "Projects"
+    },
+  ]
+
   public readonly skills: { img: string, name: string, officalSite: string }[] = [
     {
       img: "html.png",

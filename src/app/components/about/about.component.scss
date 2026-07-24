@@ -28,6 +28,37 @@
         }
       }
 
+      .showcase-cards-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-block: 10px;
+
+        .showcase-card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 15px;
+          border: solid var(--primary-color);
+          border-radius: 15px;
+          line-height: 1;
+          width: 300px;
+
+          .digit {
+            font-size: 50px;
+            color: var(--primary-color);
+          }
+
+          .type {
+            font-size: 25px;
+            color: var(--text-color);
+          }
+
+        }
+      }
+
       .action-buttons {
         display: flex;
         gap: 8px;
