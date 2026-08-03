@@ -13,7 +13,7 @@ import {
 export class HeaderComponent {
   @ViewChildren('navLink') public navLinks!: QueryList<ElementRef>;
 
-  public readonly sections: string[] = ['hero', 'about', 'journey', 'projects', 'contact'];
+  public readonly sections: string[] = ['hero', 'skills', 'about', 'journey', 'projects', 'contact'];
 
   constructor() { }
 
