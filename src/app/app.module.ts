@@ -16,7 +16,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     MyJourneyComponent,
     ProjectsComponent,
     ContactComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,10 +41,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatCheckboxModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
+    MatTooltipModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

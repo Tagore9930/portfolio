@@ -173,12 +173,23 @@
     }
   }
 
+  .skills-section {
+    .skill-container {
+      .proficiency-levels-group .proficiency-levels {
+        justify-content: flex-start !important;
+      }
+
+      .skill {
+        max-width: none !important;
+      }
+    }
+  }
+
   .about-section {
     .about-container {
       flex-direction: column-reverse;
 
-      .information,
-      .skills {
+      .information {
         width: 100%;
       }
     }

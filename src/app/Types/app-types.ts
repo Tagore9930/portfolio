@@ -1,3 +1,6 @@
+export type SkillType = { img: string, name: string, rating: number, officalSite: string };
+export type GroupedSkillsType = { name: string, icon: string, skills: SkillType[] };
+
 export type JourneyType = {
   role: string;
   organization: string;

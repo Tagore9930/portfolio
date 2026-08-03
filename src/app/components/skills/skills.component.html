@@ -1,0 +1,65 @@
+<div class="skills-section">
+  <h3 class="navigation-title">My <span>Skills</span></h3>
+  <div class="container-sm skill-container h-100">
+    <div class="skills">
+      <div class="proficiency-levels-group">
+        <span class="label-name m-0 fs-5 fw-bold">📊 Proficiency Levels</span>
+        <div class="proficiency-levels">
+          <div
+            class="proficiency-level"
+            *ngFor="let proficiency of proficiencies"
+          >
+            <div class="stars">
+              <div class="star fs-5" *ngFor="let star of [1, 2, 3, 4, 5]">
+                <span *ngIf="star <= proficiency.stars; else emptyStar"
+                  >⭐</span
+                >
+              </div>
+            </div>
+            <div class="name fs-5">
+              {{ proficiency?.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="skills-group"
+        *ngFor="let group of dataService?.groupedSkills"
+      >
+        <p class="group-name m-0 fs-5 fw-bold">
+          <i class="bx" [ngClass]="group.icon"></i>
+          {{ group?.name }}
+        </p>
+        <div class="skills-list">
+          <a
+            [href]="skill.officalSite"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="skill"
+            *ngFor="let skill of group?.skills"
+          >
+            <div class="icon">
+              <img
+                src="assets/skills/{{ skill.img }}"
+                alt="{{ skill.name }} icon"
+                class="skill-img"
+              />
+              <p class="skill-name">{{ skill.name }}</p>
+            </div>
+            <div class="skill-experience">
+              <div class="rating">
+                <span class="star fs-5" *ngFor="let i of [1, 2, 3, 4, 5]">
+                  <span *ngIf="i <= skill.rating; else emptyStar">⭐</span>
+                </span>
+              </div>
+              <span class="fs-5">{{ getSkillExp(skill.rating) }}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <ng-template #emptyStar>
+        <span class="bi bi-star"></span>
+      </ng-template>
+    </div>
+  </div>
+</div>

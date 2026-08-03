@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { JourneyType } from '../Types/app-types';
+import { GroupedSkillsType, JourneyType } from '../Types/app-types';
 
 @Injectable({
   providedIn: 'root'
@@ -24,22 +24,22 @@ export class DataService {
     {
       name: "linkedin",
       link: "https://www.linkedin.com/in/tagore-banda/",
-      icon: "bxl-linkedin"
+      icon: "bi-linkedin"
     },
     {
       name: "github",
       link: "https://github.com/tagore9930",
-      icon: "bxl-github"
+      icon: "bi-github"
     },
     {
       name: "whatsapp",
       link: "https://api.whatsapp.com/send?phone=918904356993",
-      icon: "bxl-whatsapp"
+      icon: "bi-whatsapp"
     },
     {
       name: "gmail",
       link: "https://mail.google.com/mail/?view=cm&fs=1&to=tagore9930@gmail.com",
-      icon: "bxl-gmail"
+      icon: "bi-envelope"
     },
   ]
 
@@ -64,112 +64,169 @@ export class DataService {
     },
   ]
 
-  public readonly skills: { img: string, name: string, officalSite: string }[] = [
+  public readonly groupedSkills: GroupedSkillsType[] = [
     {
-      img: "html.png",
-      name: "HTML",
-      officalSite: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+      name: "🎨 Frontend Development",
+      icon: "bx-code-alt",
+      skills: [
+        {
+          img: "html.png",
+          name: "HTML",
+          rating: 5,
+          officalSite: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+        },
+        {
+          img: "css.png",
+          name: "CSS",
+          rating: 5,
+          officalSite: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+        },
+        {
+          img: "sass.png",
+          name: "SASS",
+          rating: 5,
+          officalSite: 'https://sass-lang.com/'
+        },
+        {
+          img: "bootstrap.png",
+          name: "bootstrap",
+          rating: 5,
+          officalSite: 'https://getbootstrap.com/'
+        },
+        {
+          img: "angular_material.png",
+          name: "Material",
+          rating: 5,
+          officalSite: 'https://material.angular.dev/'
+        },
+        {
+          img: "javascript.png",
+          name: "Javascript",
+          rating: 4,
+          officalSite: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+        },
+        {
+          img: "typescript.png",
+          name: "typescript",
+          rating: 3,
+          officalSite: 'https://www.typescriptlang.org/'
+        },
+        {
+          img: "angular.png",
+          name: "angular",
+          rating: 4,
+          officalSite: 'https://angular.dev/'
+        },
+        {
+          img: "react.png",
+          name: "react",
+          rating: 3,
+          officalSite: 'https://react.dev/'
+        },
+        {
+          img: "figma.png",
+          name: "figma",
+          rating: 3,
+          officalSite: 'https://figma.com/'
+        },
+        {
+          img: "wordpress.png",
+          name: "wordpress",
+          rating: 2,
+          officalSite: 'https://wordpress.org/'
+        }
+      ]
     },
     {
-      img: "css.png",
-      name: "CSS",
-      officalSite: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+      name: "💻 Programming Languages",
+      icon: "",
+      skills: [
+        {
+          img: "c.png",
+          name: "C",
+          rating: 3,
+          officalSite: 'https://www.c-language.org/'
+        },
+        {
+          img: "java.png",
+          name: "java",
+          rating: 3,
+          officalSite: 'https://www.java.com/en/'
+        },
+        {
+          img: "python.png",
+          name: "python",
+          rating: 2,
+          officalSite: 'https://www.python.org/'
+        },
+      ]
     },
     {
-      img: "sass.png",
-      name: "SASS",
-      officalSite: 'https://sass-lang.com/'
+      name: "🌿 Version Control",
+      icon: "",
+      skills: [
+        {
+          img: "git.png",
+          name: "git",
+          rating: 3,
+          officalSite: 'https://git-scm.com/'
+        },
+        {
+          img: "github.png",
+          name: "github",
+          rating: 4,
+          officalSite: 'https://github.com/'
+        },
+        {
+          img: "gitlab.png",
+          name: "gitLab",
+          rating: 3,
+          officalSite: 'https://about.gitlab.com/'
+        },
+        {
+          img: "bitbucket.png",
+          name: "bitbucket",
+          rating: 5,
+          officalSite: 'https://bitbucket.org/'
+        },
+      ]
     },
     {
-      img: "bootstrap.png",
-      name: "bootstrap",
-      officalSite: 'https://getbootstrap.com/'
+      name: "🛠️ Project Management",
+      icon: "",
+      skills: [
+        {
+          img: "wrike.png",
+          name: "wrike",
+          rating: 4,
+          officalSite: 'https://www.wrike.com/'
+        },
+      ]
     },
     {
-      img: "javascript.png",
-      name: "Javascript",
-      officalSite: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-    },
-    {
-      img: "typescript.png",
-      name: "typescript",
-      officalSite: 'https://www.typescriptlang.org/'
-    },
-    {
-      img: "angular.png",
-      name: "angular",
-      officalSite: 'https://angular.dev/'
-    },
-    {
-      img: "angular_material.png",
-      name: "Material",
-      officalSite: 'https://material.angular.dev/'
-    },
-    {
-      img: "react.png",
-      name: "react",
-      officalSite: 'https://react.dev/'
-    },
-    {
-      img: "figma.png",
-      name: "figma",
-      officalSite: 'https://figma.com/'
-    },
-    {
-      img: "c.png",
-      name: "C",
-      officalSite: 'https://www.c-language.org/'
-    },
-    {
-      img: "java.png",
-      name: "java",
-      officalSite: 'https://www.java.com/en/'
-    },
-    {
-      img: "python.png",
-      name: "python",
-      officalSite: 'https://www.python.org/'
-    },
-    {
-      img: "git.png",
-      name: "git",
-      officalSite: 'https://git-scm.com/'
-    },
-    {
-      img: "github.png",
-      name: "github",
-      officalSite: 'https://github.com/'
-    },
-    {
-      img: "gitlab.png",
-      name: "gitLab",
-      officalSite: 'https://about.gitlab.com/'
-    },
-    {
-      img: "bitbucket.png",
-      name: "bitbucket",
-      officalSite: 'https://bitbucket.org/'
-    },
-    {
-      img: "wrike.png",
-      name: "wrike",
-      officalSite: 'https://www.wrike.com/'
-    },
-    {
-      img: "fiverr.png",
-      name: "fiverr",
-      officalSite: 'https://www.fiverr.com/'
-    },
-    {
-      img: "upwork.png",
-      name: "upwork",
-      officalSite: 'https://www.upwork.com/'
-    },
-    {
-      img: "freelancer.png",
-      name: "freelancer",
-      officalSite: 'https://www.freelancer.com/'
-    },
+      name: "💼 Freelancing Platforms",
+      icon: "",
+      skills: [
+        {
+          img: "fiverr.png",
+          name: "fiverr",
+          rating: 4,
+          officalSite: 'https://www.fiverr.com/'
+        },
+        {
+          img: "upwork.png",
+          name: "upwork",
+          rating: 3,
+          officalSite: 'https://www.upwork.com/'
+        },
+        {
+          img: "freelancer.png",
+          name: "freelancer",
+          rating: 3,
+          officalSite: 'https://www.freelancer.com/'
+        },
+      ]
+    }
   ];
 
   public readonly experiences: JourneyType[] = [

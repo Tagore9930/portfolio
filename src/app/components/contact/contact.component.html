@@ -34,8 +34,9 @@
     </div>
   </form>
   <div class="social-icons">
-    <a *ngFor="let media of dataService.socialMedias" [href]="media.link" target="_blank" rel="noopener noreferrer"
-      [attr.aria-label]="media.name" class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media.icon"></i>
+    <a *ngFor="let media of dataService.socialMedias" [href]="media.link" target="_blank" [matTooltip]="media.name"
+      matTooltipPosition="above" rel="noopener noreferrer" [attr.aria-label]="media.name"
+      class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media.icon"></i>
     </a>
   </div>
   <div class="copy-right-section text-center">

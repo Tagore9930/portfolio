@@ -6,16 +6,17 @@
       </h2>
       <p class="hero-message mb-0">{{dataService.heroSmallAbout}}</p>
       <div class="social-icons">
-        <a *ngFor="let media of dataService.socialMedias" [href]="media.link" target="_blank" rel="noopener noreferrer"
-          [attr.aria-label]="media.name" class="btn-slide-animation slide-main"><i class="bx" [ngClass]="media.icon"></i>
+        <a *ngFor="let media of dataService.socialMedias" [href]="media.link" target="_blank" [matTooltip]="media.name"
+          matTooltipPosition="above" rel="noopener noreferrer" [attr.aria-label]="media.name"
+          class="btn-slide-animation slide-main"><i class="bi" [ngClass]="media.icon"></i>
         </a>
       </div>
 
       <div class="action-buttons">
-        <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent"
-          (click)="openResume()" aria-label="Open Resume">Resume</button>
-        <button class="ctm-basic-btn ctm-btn-style-2 btn-slide-animation slide-main"
-          (click)="scrollToContact()" aria-label="Scroll to Contact Section">Contact</button>
+        <button class="ctm-basic-btn ctm-btn-style-1 btn-slide-animation slide-transparent" (click)="openResume()"
+          aria-label="Open Resume">Resume</button>
+        <button class="ctm-basic-btn ctm-btn-style-2 btn-slide-animation slide-main" (click)="scrollToContact()"
+          aria-label="Scroll to Contact Section">Contact</button>
       </div>
     </div>
     <div class="hero-img-container">
